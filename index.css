@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+}
+
+.loadingpage {
+    display: flex;
+    position: absolute;
+    z-index: 70;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    animation: slidedown 1s linear;
+}
+
+.container {
+    display: flex;
+}
+
+.opacity {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    z-index: -10;
+    background: rgb(0, 0, 0, .5);
+}
+
+video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: -20;
+    object-fit: cover;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: flex-start;
+    z-index: 0;
+    text-align: center;
+    border: 2px solid #000;
+    font-weight: 700;
+    font-size: 2em;
+    color: #fff;
+    padding: 30px 60px;
+}
+
+.btn-outside {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    clip-path: circle(15px at 97% 5%);
+    background: #ff7f28;
+    transition: all 1s ease-in-out;
+}
+
+.btn-inside {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    clip-path: circle(10px at 97% 5%);
+    transition: all 0.5s;
+}
+
+.btn-inside:hover {
+    background: #000;
+    cursor: pointer;
+}
+
+
+/* OPEN MENU */
+
+.btn-inside.expand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    clip-path: circle(100%);
+    background: #ff7f28;
+}
+
+
+/* MENU */
+
+.nav-main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+}
+
+.nav-main li {
+    z-index: 50;
+    padding: 1em 0;
+}
+
+.nav-main li a {
+    text-decoration: none;
+    color: #424242;
+    font-size: 6em;
+    font-weight: 900;
+    z-index: 60;
+    text-transform: uppercase;
+}
+
+.nav-main li a:hover {
+    cursor: pointer;
+    border-bottom: #000 3px solid;
+}
+
+.nav-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 30;
+    width: 100%;
+    height: 100vh;
+    font-size: 20em;
+    font-weight: 700;
+    color: #424242;
+    opacity: 0.3;
+    text-transform: uppercase;
+}
+
+@keyframes slidedown {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-100%, 0);
+    }
+}
