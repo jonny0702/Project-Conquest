@@ -1,0 +1,18 @@
+.transition-1 {
+    font-weight: 900;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background: var(--orange);
+    z-index: 500;
+    transition: 0.5s ease-out;
+    pointer-events: none;
+}
+
+.transition-1.is-active {
+    opacity: 1;
+    pointer-events: all;
+}

@@ -1,16 +1,3 @@
-/**Hamburguer-menu-button
-
- * const menuButton = document.querySelector(".menu-btn")
-
-const menu = document.querySelector(".nav-menu");
-
-menuButton.addEventListener("click", () => {
-    menuButton.classList.toggle("open");
-    menu.classList.toggle("appears");
-})
- */
-
-
 // Photos work
 const work = document.querySelector('.work')
 const photos = work.querySelectorAll('div')

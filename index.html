@@ -7,6 +7,8 @@
     <title>Project Conquest</title>
     <!-- CSS Styles -->
     <link rel="stylesheet" href="index.css">
+    <!-- CSS TRANSITIONS -->
+    <link rel="stylesheet" href="Transitions.css">
     <!-- LATO GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -14,10 +16,19 @@
 </head>
 
 <body>
+
+    <div class="transition transition-1 is-active"></div>
     <div class="container">
-        <div class="btn-outside" id="btn-outside"></div>
-        <div class="btn-inside" id="btn-inside">
-            <ul class="nav-main">
+        <div class="nav-main">
+            <h1 class="title">Project Conquest</h1>
+            <div class="menu-btn">
+                <div class="menu-btn-burger"></div>
+            </div>
+        </div>
+        <div class="opacity"></div>
+        <video src="sources/PC bucle web.mp4" loop autoplay></video>
+        <div class="nav-switch display">
+            <ul class="nav-menu">
                 <li>
                     <a href="index.html">Home</a>
                 </li>
@@ -36,16 +47,13 @@
             </ul>
             <span class="nav-bg" id="nav-bg"></span>
         </div>
-
-        <h1 class="title">Project Conquest</h1>
-        <div class="opacity"></div>
-        <video src="sources/PC bucle web.mp4" loop autoplay></video>
     </div>
     <!-- CUSTOM JS -->
     <script src="index.js"></script>
-    <div>
-        <p>helloo vengo a joder ah</p>
-    </div>
+
+    <!-- TRANSITIONS JS -->
+    <script src="transitions.js"></script>
+
 </body>
 
 </html>

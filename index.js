@@ -1,30 +1,28 @@
-const button = document.getElementById('btn-inside')
-const btn = document.getElementById('btn-outside')
+/**Hamburguer-menu-button*/
 
-button.addEventListener('click', (a) => {
-    button.classList.toggle('expand')
-    btn.classList.toggle('inside')
-        //console.log('hola')
+const menuButton = document.querySelector(".menu-btn")
+
+const menu = document.querySelector(".nav-menu");
+
+const display = document.querySelector('.nav-switch')
+
+const links = document.querySelectorAll('.nav-menu')
+
+menuButton.addEventListener("click", () => {
+    menuButton.classList.toggle("open");
+    display.classList.toggle('display')
 })
 
-const nav = document.querySelectorAll('.nav-main li a')
+const nav = document.querySelectorAll('.nav-switch .nav-menu li a')
 
 const navBg = document.getElementById('nav-bg')
 
 nav.forEach((n) => {
     n.addEventListener('mouseover', () => {
-        console.log(n)
+        // console.log(n)
         navBg.innerHTML = n.textContent
     })
     n.addEventListener('mouseout', () => {
         navBg.innerHTML = ''
-    })
-})
-
-const slide = document.querySelector('.container')
-
-nav.forEach((n) => {
-    n.addEventListener('click', () => {
-        slide.classList.add('.loadingpage')
     })
 })
