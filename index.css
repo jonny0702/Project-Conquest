@@ -119,12 +119,12 @@ por ejemplo, el 70% de 30px es 21px  */
 
 .menu-btn.open .menu-btn-burger::before {
     transform: rotate(45deg) translate(35px, -35px);
-    background: #000;
+    background: var(--orange);
 }
 
 .menu-btn.open .menu-btn-burger::after {
     transform: rotate(-45deg) translate(35px, 35px);
-    background: #000;
+    background: var(--orange);
 }
 
 
@@ -140,7 +140,7 @@ por ejemplo, el 70% de 30px es 21px  */
     align-items: center;
     justify-content: center;
     z-index: 40;
-    background: var(--orange);
+    background: var(--black);
     transform: translateX(0);
     transition: 0.5s;
     transition: 0.5s;
@@ -166,7 +166,7 @@ por ejemplo, el 70% de 30px es 21px  */
 
 .nav-menu li a {
     text-decoration: none;
-    color: #424242;
+    color: var(--orange);
     font-size: 2em;
     font-weight: 900;
     z-index: 60;
@@ -175,7 +175,6 @@ por ejemplo, el 70% de 30px es 21px  */
 
 .nav-menu li a:hover {
     cursor: pointer;
-    border-bottom: #000 3px solid;
 }
 
 .nav-bg {

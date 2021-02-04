@@ -33,20 +33,6 @@ body::-webkit-scrollbar-track {
     background-color: rgb(33, 33, 33, 1);
 }
 
-.nav-menu a {
-    text-decoration: none;
-    color: #fff;
-    padding: 3.3vh 0;
-    font-size: 22px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: color 0.5s ease;
-}
-
-ul {
-    list-style: none;
-}
-
 
 /* NAV STYLE */
 
@@ -71,17 +57,10 @@ ul {
     transition: all 0.5s;
 }
 
-nav.sticky {
-    background-color: #212121;
-    padding: 0 80px;
-    height: 10vh;
-    bottom: 90vh
-}
-
 .nav-main .logo {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-self: center;
+    justify-content: flex-start;
     align-items: center;
     color: #fff;
     font-weight: 500;
@@ -91,6 +70,10 @@ nav.sticky {
     text-decoration: none;
 }
 
+#description {
+    width: fit-content;
+}
+
 .nav-menu {
     display: flex;
     justify-content: center;
@@ -98,17 +81,26 @@ nav.sticky {
     align-items: center;
 }
 
+.nav-main ul {
+    list-style: none;
+}
+
 .nav-menu li {
     display: flex;
     padding: 0 20px;
-    font-size: 20px;
     justify-content: center;
     align-self: center;
     align-items: center;
 }
 
-.highlight {
-    border-bottom: 2px solid #ff7f28;
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 3.3vh 0;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.5s ease;
 }
 
 .nav-menu a:hover {
@@ -116,31 +108,84 @@ nav.sticky {
     transition: none;
 }
 
+.section1 {
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--white);
+    font-weight: 500;
+    padding: 3.3vh 0;
+}
 
-/* Appear .nav-menu */
-
-.nav-menu.appears a {
-    opacity: 100;
-    cursor: pointer;
+nav.sticky {
+    background-color: #212121;
+    padding: 0 80px;
+    height: 10vh;
+    bottom: 90vh
 }
 
 
-/* Javascript change  */
+/* JAVASCRIPT HIGHLIGHT */
 
-.work .change {
-    filter: grayscale(0);
-    cursor: pointer;
-    z-index: 3;
+.highlight {
+    border-bottom: 2px solid #ff7f28;
 }
 
 
-/* Work */
+/* AUTOMATIC SLIDER */
+
+.container-slider {
+    width: 100%;
+    max-width: 992px;
+    margin: auto;
+    position: relative;
+    top: 70px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 400%;
+    height: 558px;
+    margin-left: -100%;
+}
+
+.slider-section {
+    width: 100%;
+}
+
+.slider-section img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fa-angle-left,
+.fa-angle-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.fa-angle-right {
+    right: 7px;
+}
+
+.fa-angle-left {
+    left: 7px;
+}
+
+
+/* WORK SECTION */
 
 .work {
     display: grid;
     width: 100%;
     padding: 0 100px;
-    margin: 100px 0;
+    margin: 250px 0;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(8, 250px);
     gap: 10px;
@@ -152,13 +197,31 @@ nav.sticky {
     justify-content: center;
     filter: grayscale(1);
     transition: all 0.5s;
+    overflow: hidden;
 }
 
 .work img {
     width: 100%;
     object-fit: cover;
-    transition: all 1s;
+    transition: all 0.7s;
+    transform: scale(1.3);
 }
+
+.work img:hover {
+    transform: scale(1)
+}
+
+
+/* JAVASCRIPT INTERACTIVITY */
+
+.work .change {
+    filter: grayscale(0);
+    cursor: pointer;
+    z-index: 3;
+}
+
+
+/* Independient Images */
 
 .pollera {
     grid-column: 2;
@@ -170,7 +233,7 @@ nav.sticky {
     grid-row: 1;
 }
 
-.danger {
+.gojo-jutsu {
     grid-column: 4;
     grid-row: 1;
 }
@@ -180,12 +243,12 @@ nav.sticky {
     grid-row: 2;
 }
 
-.mayela {
+.streetwear {
     grid-column: 3;
     grid-row: 2 / span 2;
 }
 
-.metro {
+.frame {
     grid-column: 4;
     grid-row: 2;
 }
@@ -195,24 +258,29 @@ nav.sticky {
     grid-row: 3;
 }
 
-.frame {
+.ciberbug {
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 3/ span 2;
 }
 
 .arrodillao {
-    grid-column: 4;
-    grid-row: 3 /span 2;
+    grid-column: 3;
+    grid-row: 5 /span 2;
 }
 
-.manos {
-    grid-column: 1;
-    grid-row: 4 /span 2;
+.metro {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.mamona {
+    grid-column: 3;
+    grid-row: 9 /span 2;
 }
 
 .maris {
     grid-column: 2;
-    grid-row: 4 / span 2;
+    grid-row: 5 / span 2;
 }
 
 .gato {
@@ -221,8 +289,13 @@ nav.sticky {
 }
 
 .madre-water {
-    grid-column: 3;
-    grid-row: 5 / span 2;
+    grid-column: 4;
+    grid-row: 3 / span 2;
+}
+
+.mayela {
+    grid-column: 1;
+    grid-row: 4 / span 2;
 }
 
 .boquete {
@@ -232,7 +305,7 @@ nav.sticky {
 
 .abuelos {
     grid-column: 1;
-    grid-row: 6/ span 2;
+    grid-row: 7/ span 2;
 }
 
 .handstand {
@@ -240,79 +313,12 @@ nav.sticky {
     grid-row: 6 / span 2;
 }
 
-
-/* Services Style */
-
-.services {
-    height: 100vh;
+.manos {
+    grid-column: 3;
+    grid-row: 7 / span 2;
 }
 
-
-/* 	BLOG STYLE */
-
-.blog {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
-    padding: 100px 0;
-    color: #ff7f28;
-    width: 100%;
-    transition: all 0.5s;
-}
-
-.blog .blog-caras {
-    text-align: center;
-    padding: 0 20px;
-}
-
-.blog-caras img {
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
-    object-fit: cover;
-    cursor: pointer;
-    border: 2px solid #fff;
-}
-
-.blog header {
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.blog h1 {
-    font-size: 14px;
-    text-transform: uppercase;
-    color: #414141
-}
-
-.blog p {
-    font-size: 20px;
-}
-
-.bg-change {
-    background: #000;
-}
-
-
-/* Profile */
-
-.profile {
-    margin-top: 50px;
-}
-
-.profile h1 {
-    text-align: center;
-    padding: 75px;
-    color: #ff7f28;
-    font-weight: bold;
-    word-spacing: 10px;
-    line-height: 70px;
-}
-
-
-/* Profile */
-
-.profile {
-    width: 100%;
-    height: 500px;
+.mesa-2 {
+    grid-column: 2;
+    grid-row: 8;
 }
