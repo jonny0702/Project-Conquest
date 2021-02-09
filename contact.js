@@ -22,3 +22,18 @@ button.addEventListener('mouseout', () => {
 button.addEventListener('click', () => {
     window.scrollY()
 })
+
+const eventForms = document.querySelectorAll('.form li')
+
+console.log('eventForms')
+
+// let highlight = eventForms.filter((form)=> form.)
+
+
+// console.log(eventForms)
+
+// eventForms.forEach((l) => {
+//     l.addEventListener('click', () => {
+//         l.classList.toggle('animation');
+//     })
+// })
